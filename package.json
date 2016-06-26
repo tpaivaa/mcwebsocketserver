@@ -1,0 +1,19 @@
+{
+  "name": "websocket",
+  "version": "0.1.0",
+  "description": "WebSocket Server to retrieve data and serve it to angular site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpaivaa/webSocket.git"
+  },
+  "author": "tpaivaa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tpaivaa/webSocket/issues"
+  },
+  "homepage": "https://github.com/tpaivaa/webSocket#readme"
+}
