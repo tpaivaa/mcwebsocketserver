@@ -48,7 +48,7 @@ wsServer.on('request', function(request) {
     // the id for a connection with connection.id
 
     console.log((new Date()) + ' Connection ID ' + connection.id + ' accepted.');
-    broadcast("Welcome! " + connection.id);
+    broadcast("Welcome! New member id:" + connection.id);
 
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
@@ -77,7 +77,7 @@ function broadcast(data) {
     Object.keys(connections).forEach(function(key) {
         var connection = connections[key];
         if (connection.connected) {
-            connection.send(' This is for You id:' + connection.id + 'Data: '+ data);
+            connection.send(' This is for You id:' + connection.id + ' Data: '+ data);
         }
     });
 }
