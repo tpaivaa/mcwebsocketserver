@@ -1,5 +1,5 @@
 {
-  "name": "websocket",
+  "name": "mcwebsocketsrever",
   "version": "0.1.0",
   "description": "WebSocket Server to retrieve data and serve it to angular site",
   "main": "index.js",
@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tpaivaa/webSocket.git"
+    "url": "git+https://github.com/tpaivaa/mcwebsocketserver.git"
   },
   "author": "tpaivaa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tpaivaa/webSocket/issues"
+    "url": "https://github.com/tpaivaa/mcwebsocketserver/issues"
   },
-  "homepage": "https://github.com/tpaivaa/webSocket#readme"
+  "homepage": "https://github.com/tpaivaa/mcwebsocketserver#readme",
+  "dependencies": {
+    "websocket": "^1.0.23"
+  }
 }
