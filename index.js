@@ -22,11 +22,19 @@ wsServer = new WebSocketServer({
 });
 
 function originIsAllowed(origin) {
-  // put logic here to detect whether the specified origin is allowed.
-  return true;
+  // put logic here to detect whether the specified origin is allowed
+    if (origin === "http:\/\/mc.ainaip.net") {
+         console.log("Correct Origin");
+         return true;
+    }
+    else {
+        console.log("!! NOT Correct Origin");
+        return false; 
+   }
 }
 
 wsServer.on('request', function(request) {
+    console.log(1, request);
     if (!originIsAllowed(request.origin)) {
       // Make sure we only accept requests from an allowed origin
       request.reject();
