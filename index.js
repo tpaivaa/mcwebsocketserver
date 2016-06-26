@@ -77,7 +77,7 @@ function broadcast(data) {
     Object.keys(connections).forEach(function(key) {
         var connection = connections[key];
         if (connection.connected) {
-            connection.send(data + ' ' + connections[key]);
+            connection.send(data + ' ' + connection.id);
         }
     });
 }
