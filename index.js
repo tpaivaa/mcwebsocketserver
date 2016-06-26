@@ -48,6 +48,7 @@ wsServer.on('request', function(request) {
     // the id for a connection with connection.id
 
     console.log((new Date()) + ' Connection ID ' + connection.id + ' accepted.');
+    broadcast("Welcome! " + connection.id);
 
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
