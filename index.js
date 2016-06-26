@@ -48,6 +48,20 @@ wsServer.on('request', function(request) {
     // the id for a connection with connection.id
 
     console.log((new Date()) + ' Connection ID ' + connection.id + ' accepted.');
+
+    connection.on('message', function(message) {
+        if (message.type === 'utf8') {
+            console.log('Received Message: ' + message.utf8Data);
+            connection.sendUTF(message.utf8Data);
+            broadcast(message.utf8Data);
+        }
+        else if (message.type === 'binary') {
+            console.log('Received Binary Message of ' + message.binaryData.length + ' bytes');
+            connection.sendBytes(message.binaryData);
+        }
+    });
+
+
     connection.on('close', function(reasonCode, description) {
         console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected. ' +
                     "Connection ID: " + connection.id);
